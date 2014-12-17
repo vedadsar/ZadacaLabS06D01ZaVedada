@@ -22,8 +22,9 @@ public class Tabela {
 	public void setPolje(int aktivniIgrac, int i, int j) throws Exception{
 		if(provjeriPolje(i, j)){
 			matrica[i][j].postaviPolje(aktivniIgrac);
-		}
+		}else{
 		throw new ArrayIndexOutOfBoundsException("Nisu dobri indexi(setPolje)");
+		}
 	}
 	/**
 	 * Getter polja matrice pod koordinatama i,j
@@ -44,7 +45,8 @@ public class Tabela {
  * @return
  */
 	public boolean provjeriPolje(int i, int j) {
-		return !(i < 0 || i >= matrica.length || j < 0 || j >= matrica[i].length);
-
+		if(i < 0 || i >= matrica.length || j < 0 || j >= matrica[i].length)
+           return false;
+        return true;
 	}
 }

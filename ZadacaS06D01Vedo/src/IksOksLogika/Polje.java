@@ -2,8 +2,8 @@ package IksOksLogika;
 
 public class Polje {
     public static final int PRVI_IGRAC = -1;
-    public static final int DRUGI_IGRAC = 1;
-    public static final int PRAZNO_POLJE = 0;
+    public  static final int DRUGI_IGRAC = 1;
+    public  static final int PRAZNO_POLJE = 0;
 	
     private int vrijednost;
     
@@ -29,7 +29,7 @@ public class Polje {
      */
     public void postaviPolje(int vrijednost) throws Exception{
     	 if(this.vrijednost==PRAZNO_POLJE){
-    		 if(vrijednost != PRVI_IGRAC  ||  vrijednost != DRUGI_IGRAC){
+    		 if((vrijednost != PRVI_IGRAC)  &&  (vrijednost != DRUGI_IGRAC)){
     			 throw new IllegalArgumentException("Niste unijeli ispravan znak");
     		 }
     		 this.vrijednost=vrijednost;

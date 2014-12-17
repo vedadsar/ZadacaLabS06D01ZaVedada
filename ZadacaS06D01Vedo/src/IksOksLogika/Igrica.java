@@ -12,7 +12,8 @@ public class Igrica {
     
     public boolean provjeriDaLiJeDozvoljenPotez(int i, int j){
     if(poljanaZaIgru.provjeriPolje(i, j))
-    	return poljanaZaIgru.getPolje(i, j).vratiVrijednostPolja() == Polje.prazno_polje;
+    	if (poljanaZaIgru.getPolje(i, j).vratiVrijednostPolja() == Polje.prazno_polje)
+    		return true;
     return false;
     }
     /**
