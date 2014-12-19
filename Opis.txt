@@ -1,0 +1,3 @@
+Cilj zadatka je da simuliramo igranje X-O. Napravili smo dva foldera sa logikom igre i interfaceom. 
+Potrudili smo se da interface sto manje zavisi od logike i da nam interface bude lagan za koristit.
+Zadatak nije zavrsen, postavit cu zavrsenu verziju do sutra :) .
