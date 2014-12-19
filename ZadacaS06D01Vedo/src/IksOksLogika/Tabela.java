@@ -1,9 +1,8 @@
-package IksOksLogika;
+package iksOksLogika;
 
 public class Tabela {
-
 	private Polje[][] matrica;
-
+	
 	public Tabela() {
 		matrica = new Polje[3][3];
 		for (int i = 0; i < matrica.length; i++) {
@@ -12,41 +11,31 @@ public class Tabela {
 			}
 		}
 	}
-/**
- * Funckija postavlja polje u matricu pod koordinatama i,j.
- * @param aktivniIgrac
- * @param i
- * @param j
- * @throws Exception
- */
-	public void setPolje(int aktivniIgrac, int i, int j) throws Exception{
-		if(provjeriPolje(i, j)){
+	
+	public int getVisinaMatrice() {
+		return 3;
+	}
+	
+	public int getSirinaMatrice() {
+		return 3;
+	}
+	
+	public void setPolje(int aktivniIgrac, int i, int j) throws Exception {
+		if (provjeriPolje(i, j)) {
 			matrica[i][j].postaviPolje(aktivniIgrac);
-		}else{
-		throw new ArrayIndexOutOfBoundsException("Nisu dobri indexi(setPolje)");
+		} else {
+			throw new ArrayIndexOutOfBoundsException("Nisu dobri indeksi matrice (setPolje)!");
 		}
 	}
-	/**
-	 * Getter polja matrice pod koordinatama i,j
-	 * @param i
-	 * @param j
-	 * @return
-	 */
+	
 	public Polje getPolje(int i, int j) {
 		if (provjeriPolje(i, j)) {
 			return matrica[i][j];
 		}
-		throw new ArrayIndexOutOfBoundsException("Nisu dobri indexi");
+		throw new ArrayIndexOutOfBoundsException("Nisu dobri indeksi matrice (getPolje)!");
 	}
-/**
- * Provjera jesu li koordinate ok.
- * @param i
- * @param j
- * @return
- */
+	
 	public boolean provjeriPolje(int i, int j) {
-		if(i < 0 || i >= matrica.length || j < 0 || j >= matrica[i].length)
-           return false;
-        return true;
+		return !((i < 0) || (i >= matrica.length) || (j < 0) || (j >= matrica[i].length));
 	}
 }
