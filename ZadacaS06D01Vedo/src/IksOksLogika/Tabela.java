@@ -1,4 +1,4 @@
-package iksOksLogika;
+package IksOksLogika;
 
 public class Tabela {
 	private Polje[][] matrica;

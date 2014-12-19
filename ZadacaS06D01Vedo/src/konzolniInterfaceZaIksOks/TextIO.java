@@ -1,4 +1,4 @@
-package IksOksInteface;
+package konzolniInterfaceZaIksOks;
 
 
 import java.io.*;

@@ -1,4 +1,4 @@
-package iksOksLogika;
+package IksOksLogika;
 
 public class Polje {
 	public static final int PRVI_IGRAC = -1;

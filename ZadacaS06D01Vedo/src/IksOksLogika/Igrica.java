@@ -1,4 +1,4 @@
-package iksOksLogika;
+package IksOksLogika;
 
 public class Igrica {
 	private Tabela poljanaZaIgru;

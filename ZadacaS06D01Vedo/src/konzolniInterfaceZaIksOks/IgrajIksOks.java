@@ -1,5 +1,6 @@
 package konzolniInterfaceZaIksOks;
-import iksOksLogika.*;
+import IksOksLogika.*;
+
 
 public class IgrajIksOks {
 
